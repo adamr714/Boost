@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{90ECCBA3-1B43-F8C5-F03C-60E238656522}</ProjectGuid>
+    <ProjectGuid>{B1A31B9A-9888-9E62-3DE9-079EDAC683B5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,33 +63,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Oscillator.cs" />
     <Compile Include="Assets\Scripts\Rocket.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project Boost/Project Boost/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project_Boost/Project_Boost/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project Boost/Project Boost/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project_Boost/Project_Boost/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project Boost/Project Boost/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project_Boost/Project_Boost/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project Boost/Project Boost/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project_Boost/Project_Boost/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project Boost/Project Boost/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project_Boost/Project_Boost/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project Boost/Project Boost/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project_Boost/Project_Boost/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project Boost/Project Boost/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project_Boost/Project_Boost/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project Boost/Project Boost/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project_Boost/Project_Boost/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project Boost/Project Boost/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/adamrosenblum/Desktop/Unity/Project_Boost/Project_Boost/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.9f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

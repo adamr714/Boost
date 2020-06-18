@@ -1298,6 +1298,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Launch_Pad
       objectReference: {fileID: 0}
+    - target: {fileID: 2823427182936689807, guid: 925253368359847938a283e775205d3f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 8002868648759432433, guid: 925253368359847938a283e775205d3f,
         type: 3}
       propertyPath: m_LocalPosition.x

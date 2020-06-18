@@ -52,7 +52,7 @@ public class Rocket : MonoBehaviour
                 {
                     break;
                 }
-            case "Win":
+            case "Finish":
                 {
                     state = State.Transending;
                     audioSource.PlayOneShot(jingle);
