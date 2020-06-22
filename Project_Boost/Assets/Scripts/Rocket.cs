@@ -18,7 +18,10 @@ public class Rocket : MonoBehaviour
     private AudioClip mainEngine, explosion, jingle;
     [SerializeField]
     private ParticleSystem enginePartical, explosionPartical, SuccessPartical;
+    [SerializeField]
+    private float _levelLoadDelay = 2.0f;
 
+    bool collisionsAreDisabled = true;
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
@@ -30,6 +33,19 @@ public class Rocket : MonoBehaviour
         ProcessInput();
     }
 
+    private void RespondToDebugKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextScene();
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            //toggle collision
+            collisionsAreDisabled = !collisionsAreDisabled;
+        }
+    }
+
     private void ProcessInput()
     {
         if (state == State.Alive)
@@ -37,11 +53,17 @@ public class Rocket : MonoBehaviour
             ApplyThrust();
             Rotate();
         }
+
+        if(Debug.isDebugBuild)
+        {
+            RespondToDebugKeys();
+        }
+
     }  
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (state != State.Alive)
+        if (state != State.Alive || collisionsAreDisabled)
         {
             return;
         }
@@ -57,7 +79,7 @@ public class Rocket : MonoBehaviour
                     state = State.Transending;
                     audioSource.PlayOneShot(jingle);
                     SuccessPartical.Play();
-                    Invoke("LoadNextScene", 1.0f);
+                    Invoke("LoadNextScene", _levelLoadDelay);
                     break;
                 }
             default:
@@ -65,7 +87,7 @@ public class Rocket : MonoBehaviour
                 audioSource.Stop();
                 audioSource.PlayOneShot(explosion);
                 explosionPartical.Play();
-                Invoke("ReloadScene", 1.0f);
+                Invoke("ReloadScene", _levelLoadDelay);
                 break;
         }
     }
@@ -102,7 +124,7 @@ public class Rocket : MonoBehaviour
         float thrustThisFrame = _mainThrust * Time.deltaTime;
         if (Input.GetKey(KeyCode.Space))
         {
-            rigidBody.AddRelativeForce(Vector3.up * thrustThisFrame);
+            rigidBody.AddRelativeForce(Vector3.up * thrustThisFrame *Time.deltaTime);
             if (!audioSource.isPlaying)
             {
                     audioSource.PlayOneShot(mainEngine);
